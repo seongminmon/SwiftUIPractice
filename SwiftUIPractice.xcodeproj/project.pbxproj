@@ -12,6 +12,8 @@
 		247A5FF72C79ADF200906909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247A5FF62C79ADF200906909 /* Assets.xcassets */; };
 		247A5FFA2C79ADF200906909 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247A5FF92C79ADF200906909 /* Preview Assets.xcassets */; };
 		247A60012C79AE2600906909 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 247A60002C79AE2600906909 /* .gitignore */; };
+		247A60032C79AE4C00906909 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A60022C79AE4C00906909 /* APIKey.swift */; };
+		247A60052C79AE7E00906909 /* TossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A60042C79AE7E00906909 /* TossView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		247A5FF62C79ADF200906909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		247A5FF92C79ADF200906909 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		247A60002C79AE2600906909 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		247A60022C79AE4C00906909 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		247A60042C79AE7E00906909 /* TossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,10 @@
 		247A5FF12C79ADF100906909 /* SwiftUIPractice */ = {
 			isa = PBXGroup;
 			children = (
+				247A60022C79AE4C00906909 /* APIKey.swift */,
 				247A5FF22C79ADF100906909 /* SwiftUIPracticeApp.swift */,
 				247A5FF42C79ADF100906909 /* ContentView.swift */,
+				247A60042C79AE7E00906909 /* TossView.swift */,
 				247A5FF62C79ADF200906909 /* Assets.xcassets */,
 				247A5FF82C79ADF200906909 /* Preview Content */,
 			);
@@ -142,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				247A5FF52C79ADF100906909 /* ContentView.swift in Sources */,
+				247A60052C79AE7E00906909 /* TossView.swift in Sources */,
+				247A60032C79AE4C00906909 /* APIKey.swift in Sources */,
 				247A5FF32C79ADF100906909 /* SwiftUIPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
