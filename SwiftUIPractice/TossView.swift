@@ -7,7 +7,57 @@
 
 import SwiftUI
 
+struct HeaderButton: View {
+    
+    let imageName: String
+    let text: String
+    
+    var body: some View {
+        Button {
+            print("\(text) 탭")
+        } label: {
+            VStack(spacing: 10) {
+                Image(systemName: imageName)
+                Text(text)
+            }
+        }
+    }
+}
+
+private struct RadiusBlueBackground: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity, maxHeight: 50)
+            .foregroundStyle(.white)
+            .background(.blue)
+            .clipShape(.capsule)
+    }
+}
+
+extension View {
+    func asRadiusBlueBackground() -> some View {
+        return self
+            .modifier(RadiusBlueBackground())
+    }
+}
+
 struct TossView: View {
+    
+    private var titleText: some View {
+        Text("포인트를 더 모을 수 있게 맞춤 혜택을 추천해드릴까요?")
+            .font(.title3)
+            .fontWeight(.bold)
+            .foregroundStyle(.white)
+            .padding()
+    }
+    
+    private func descriptionView(_ imageName: String, _ text: String) -> some View {
+        HStack {
+            Image(systemName: imageName)
+            Text(text)
+            Spacer()
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -15,59 +65,20 @@ struct TossView: View {
             
             VStack {
                 HStack(spacing: 80) {
-                    Button {
-                        print("1")
-                    } label: {
-                        VStack(spacing: 10) {
-                            Image(systemName: "star")
-                            Text("토스뱅크")
-                        }
-                    }
-                    
-                    Button {
-                        print("2")
-                    } label: {
-                        VStack(spacing: 10) {
-                            Image(systemName: "star")
-                            Text("토스증권")
-                        }
-                    }
-                    
-                    Button {
-                        print("3")
-                    } label: {
-                        VStack(spacing: 10) {
-                            Image(systemName: "star")
-                            Text("고객센터")
-                        }
-                    }
+                    HeaderButton(imageName: "star", text: "토스뱅크")
+                    HeaderButton(imageName: "heart", text: "토스증권")
+                    HeaderButton(imageName: "person", text: "고객센터")
                 }
                 .foregroundStyle(.white)
                 .background(.black)
                 .padding()
                 
-                Text("포인트를 더 모을 수 있게 맞춤 혜택을 추천해드릴까요?")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
-                    .padding()
+                titleText
 
                 VStack(spacing: 20) {
-                    HStack {
-                        Image(systemName: "star")
-                        Text("매일 포인트 받는 출석체크/퀴즈")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "star")
-                        Text("새로운 이벤트")
-                        Spacer()
-                    }
-                    HStack {
-                        Image(systemName: "star")
-                        Text("미션 추천")
-                        Spacer()
-                    }
+                    descriptionView("star", "매일 포인트 받는 출석체크/퀴즈")
+                    descriptionView("heart", "새로운 이벤트")
+                    descriptionView("person", "미션 추천")
                 }
                 .foregroundStyle(.gray)
                 
@@ -85,10 +96,7 @@ struct TossView: View {
                 } label: {
                     Text("동의하기")
                 }
-                .frame(width: 350, height: 50)
-                .foregroundStyle(.white)
-                .background(.blue)
-                .cornerRadius(10)
+                .asRadiusBlueBackground()
                 
                 Button {
                     print("다음에 하기 탭")
@@ -98,12 +106,10 @@ struct TossView: View {
                 .foregroundStyle(.gray)
             }
             .padding(EdgeInsets(top: 60, leading: 0, bottom: 40, trailing: 0))
-            
         }
         .ignoresSafeArea()
        
     }
-    
 }
 
 #Preview {
