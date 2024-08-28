@@ -24,33 +24,14 @@ struct HeaderButton: View {
     }
 }
 
-private struct RadiusBlueBackground: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, maxHeight: 50)
-            .foregroundStyle(.white)
-            .background(.blue)
-            .clipShape(.capsule)
-    }
-}
-
-extension View {
-    func asRadiusBlueBackground() -> some View {
-        return self
-            .modifier(RadiusBlueBackground())
-    }
-}
-
 struct TossView: View {
     
     @State var genre = "로맨스"
     
     private var titleText: some View {
         Text("포인트를 더 모을 수 있게 맞춤 혜택을 추천해드릴까요?")
-            .font(.title2)
-            .fontWeight(.bold)
-            .foregroundStyle(.white)
+            .asBoldWeight()
+            .asForeground(.white)
             .padding()
     }
     
@@ -78,7 +59,7 @@ struct TossView: View {
                     HeaderButton(imageName: "heart", text: "토스증권")
                     HeaderButton(imageName: "person", text: "고객센터")
                 }
-                .background(.black)
+                .asBackground(.black)
                 .padding()
                 
                 titleText
@@ -88,7 +69,7 @@ struct TossView: View {
                     descriptionView("heart", "새로운 이벤트")
                     descriptionView("person", "미션 추천")
                 }
-                .foregroundStyle(.gray)
+                .asForeground(.gray)
                 
                 Text("선택한 장르: \(genre)")
                     .padding()
@@ -97,7 +78,7 @@ struct TossView: View {
                     genreButton("액션")
                     genreButton("스릴러")
                 }
-                .foregroundStyle(.blue)
+                .asForeground(.blue)
                 
                 Spacer()
                 
@@ -105,7 +86,7 @@ struct TossView: View {
                     Text("[선택] 맞춤형 서비스 이용 동의")
                     Spacer()
                 }
-                .foregroundStyle(.gray)
+                .asForeground(.gray)
                 .padding()
                 
                 Button {
@@ -120,9 +101,9 @@ struct TossView: View {
                 } label: {
                     Text("다음에 하기")
                 }
-                .foregroundStyle(.gray)
+                .asForeground(.gray)
             }
-            .foregroundStyle(.white)
+            .asForeground(.white)
             .padding(.vertical, 40)
         }
         .ignoresSafeArea()

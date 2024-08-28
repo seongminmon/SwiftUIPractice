@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		240785162C7EFF2900E06A5E /* GenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240785152C7EFF2900E06A5E /* GenreView.swift */; };
+		240785182C7F022300E06A5E /* NetflixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240785172C7F022300E06A5E /* NetflixView.swift */; };
+		2407851B2C7F029700E06A5E /* ButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407851A2C7F029700E06A5E /* ButtonWrapper.swift */; };
+		2407851D2C7F035D00E06A5E /* RadiusBlueBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407851C2C7F035D00E06A5E /* RadiusBlueBackground.swift */; };
+		240785202C7F03BD00E06A5E /* ForegroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2407851F2C7F03BD00E06A5E /* ForegroundWrapper.swift */; };
+		240785222C7F08A200E06A5E /* BackgroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240785212C7F08A200E06A5E /* BackgroundWrapper.swift */; };
+		240785242C7F08B200E06A5E /* BoldWeightWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240785232C7F08B200E06A5E /* BoldWeightWrapper.swift */; };
+		240785262C7F10ED00E06A5E /* CornerRadiusWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240785252C7F10ED00E06A5E /* CornerRadiusWrapper.swift */; };
+		240785282C7F144E00E06A5E /* toggleTintWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240785272C7F144E00E06A5E /* toggleTintWrapper.swift */; };
 		247A5FF32C79ADF100906909 /* SwiftUIPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A5FF22C79ADF100906909 /* SwiftUIPracticeApp.swift */; };
 		247A5FF52C79ADF100906909 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A5FF42C79ADF100906909 /* ContentView.swift */; };
 		247A5FF72C79ADF200906909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247A5FF62C79ADF200906909 /* Assets.xcassets */; };
@@ -19,6 +27,14 @@
 
 /* Begin PBXFileReference section */
 		240785152C7EFF2900E06A5E /* GenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreView.swift; sourceTree = "<group>"; };
+		240785172C7F022300E06A5E /* NetflixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixView.swift; sourceTree = "<group>"; };
+		2407851A2C7F029700E06A5E /* ButtonWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWrapper.swift; sourceTree = "<group>"; };
+		2407851C2C7F035D00E06A5E /* RadiusBlueBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusBlueBackground.swift; sourceTree = "<group>"; };
+		2407851F2C7F03BD00E06A5E /* ForegroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundWrapper.swift; sourceTree = "<group>"; };
+		240785212C7F08A200E06A5E /* BackgroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWrapper.swift; sourceTree = "<group>"; };
+		240785232C7F08B200E06A5E /* BoldWeightWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldWeightWrapper.swift; sourceTree = "<group>"; };
+		240785252C7F10ED00E06A5E /* CornerRadiusWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusWrapper.swift; sourceTree = "<group>"; };
+		240785272C7F144E00E06A5E /* toggleTintWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggleTintWrapper.swift; sourceTree = "<group>"; };
 		247A5FEF2C79ADF100906909 /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247A5FF22C79ADF100906909 /* SwiftUIPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeApp.swift; sourceTree = "<group>"; };
 		247A5FF42C79ADF100906909 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +56,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240785192C7F027400E06A5E /* CustomModifier */ = {
+			isa = PBXGroup;
+			children = (
+				2407851C2C7F035D00E06A5E /* RadiusBlueBackground.swift */,
+			);
+			path = CustomModifier;
+			sourceTree = "<group>";
+		};
+		2407851E2C7F03AD00E06A5E /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				2407851A2C7F029700E06A5E /* ButtonWrapper.swift */,
+				2407851F2C7F03BD00E06A5E /* ForegroundWrapper.swift */,
+				240785212C7F08A200E06A5E /* BackgroundWrapper.swift */,
+				240785232C7F08B200E06A5E /* BoldWeightWrapper.swift */,
+				240785252C7F10ED00E06A5E /* CornerRadiusWrapper.swift */,
+				240785272C7F144E00E06A5E /* toggleTintWrapper.swift */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
 		247A5FE62C79ADF100906909 = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +98,13 @@
 			isa = PBXGroup;
 			children = (
 				247A60022C79AE4C00906909 /* APIKey.swift */,
+				2407851E2C7F03AD00E06A5E /* Wrapper */,
+				240785192C7F027400E06A5E /* CustomModifier */,
 				247A5FF22C79ADF100906909 /* SwiftUIPracticeApp.swift */,
 				247A5FF42C79ADF100906909 /* ContentView.swift */,
 				247A60042C79AE7E00906909 /* TossView.swift */,
 				240785152C7EFF2900E06A5E /* GenreView.swift */,
+				240785172C7F022300E06A5E /* NetflixView.swift */,
 				247A5FF62C79ADF200906909 /* Assets.xcassets */,
 				247A5FF82C79ADF200906909 /* Preview Content */,
 			);
@@ -152,9 +192,17 @@
 			files = (
 				247A5FF52C79ADF100906909 /* ContentView.swift in Sources */,
 				247A60052C79AE7E00906909 /* TossView.swift in Sources */,
+				240785202C7F03BD00E06A5E /* ForegroundWrapper.swift in Sources */,
+				2407851B2C7F029700E06A5E /* ButtonWrapper.swift in Sources */,
 				240785162C7EFF2900E06A5E /* GenreView.swift in Sources */,
+				240785182C7F022300E06A5E /* NetflixView.swift in Sources */,
+				240785262C7F10ED00E06A5E /* CornerRadiusWrapper.swift in Sources */,
+				240785242C7F08B200E06A5E /* BoldWeightWrapper.swift in Sources */,
+				2407851D2C7F035D00E06A5E /* RadiusBlueBackground.swift in Sources */,
+				240785282C7F144E00E06A5E /* toggleTintWrapper.swift in Sources */,
 				247A60032C79AE4C00906909 /* APIKey.swift in Sources */,
 				247A5FF32C79ADF100906909 /* SwiftUIPracticeApp.swift in Sources */,
+				240785222C7F08A200E06A5E /* BackgroundWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +344,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +374,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

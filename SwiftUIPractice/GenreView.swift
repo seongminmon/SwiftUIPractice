@@ -35,8 +35,8 @@ struct GenreView: View {
             }
         }
         .padding()
-        .foregroundStyle(.white)
-        .background(.gray)
+        .asForeground(.white)
+        .asBackground(.gray)
         
         ListView(list: $list)
     }
