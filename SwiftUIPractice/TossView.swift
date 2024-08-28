@@ -27,6 +27,7 @@ struct HeaderButton: View {
 private struct RadiusBlueBackground: ViewModifier {
     func body(content: Content) -> some View {
         content
+            .fontWeight(.bold)
             .frame(maxWidth: .infinity, maxHeight: 50)
             .foregroundStyle(.white)
             .background(.blue)
@@ -43,9 +44,11 @@ extension View {
 
 struct TossView: View {
     
+    @State var genre = "로맨스"
+    
     private var titleText: some View {
         Text("포인트를 더 모을 수 있게 맞춤 혜택을 추천해드릴까요?")
-            .font(.title3)
+            .font(.title2)
             .fontWeight(.bold)
             .foregroundStyle(.white)
             .padding()
@@ -59,6 +62,12 @@ struct TossView: View {
         }
     }
     
+    private func genreButton(_ text: String) -> some View {
+        Button(text) {
+            genre = text
+        }
+    }
+    
     var body: some View {
         ZStack {
             Color(.black)
@@ -69,7 +78,6 @@ struct TossView: View {
                     HeaderButton(imageName: "heart", text: "토스증권")
                     HeaderButton(imageName: "person", text: "고객센터")
                 }
-                .foregroundStyle(.white)
                 .background(.black)
                 .padding()
                 
@@ -81,6 +89,15 @@ struct TossView: View {
                     descriptionView("person", "미션 추천")
                 }
                 .foregroundStyle(.gray)
+                
+                Text("선택한 장르: \(genre)")
+                    .padding()
+                HStack(spacing: 30) {
+                    genreButton("로맨스")
+                    genreButton("액션")
+                    genreButton("스릴러")
+                }
+                .foregroundStyle(.blue)
                 
                 Spacer()
                 
@@ -105,10 +122,10 @@ struct TossView: View {
                 }
                 .foregroundStyle(.gray)
             }
-            .padding(EdgeInsets(top: 60, leading: 0, bottom: 40, trailing: 0))
+            .foregroundStyle(.white)
+            .padding(.vertical, 40)
         }
         .ignoresSafeArea()
-       
     }
 }
 

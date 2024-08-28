@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240785162C7EFF2900E06A5E /* GenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240785152C7EFF2900E06A5E /* GenreView.swift */; };
 		247A5FF32C79ADF100906909 /* SwiftUIPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A5FF22C79ADF100906909 /* SwiftUIPracticeApp.swift */; };
 		247A5FF52C79ADF100906909 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A5FF42C79ADF100906909 /* ContentView.swift */; };
 		247A5FF72C79ADF200906909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247A5FF62C79ADF200906909 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240785152C7EFF2900E06A5E /* GenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreView.swift; sourceTree = "<group>"; };
 		247A5FEF2C79ADF100906909 /* SwiftUIPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247A5FF22C79ADF100906909 /* SwiftUIPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPracticeApp.swift; sourceTree = "<group>"; };
 		247A5FF42C79ADF100906909 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				247A5FF22C79ADF100906909 /* SwiftUIPracticeApp.swift */,
 				247A5FF42C79ADF100906909 /* ContentView.swift */,
 				247A60042C79AE7E00906909 /* TossView.swift */,
+				240785152C7EFF2900E06A5E /* GenreView.swift */,
 				247A5FF62C79ADF200906909 /* Assets.xcassets */,
 				247A5FF82C79ADF200906909 /* Preview Content */,
 			);
@@ -149,6 +152,7 @@
 			files = (
 				247A5FF52C79ADF100906909 /* ContentView.swift in Sources */,
 				247A60052C79AE7E00906909 /* TossView.swift in Sources */,
+				240785162C7EFF2900E06A5E /* GenreView.swift in Sources */,
 				247A60032C79AE4C00906909 /* APIKey.swift in Sources */,
 				247A5FF32C79ADF100906909 /* SwiftUIPracticeApp.swift in Sources */,
 			);
