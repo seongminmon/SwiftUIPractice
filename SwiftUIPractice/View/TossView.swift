@@ -93,6 +93,7 @@ struct TossView: View {
                     print("동의하기 탭")
                 } label: {
                     Text("동의하기")
+                        .font(.title3)
                 }
                 .asRadiusBlueBackground()
                 

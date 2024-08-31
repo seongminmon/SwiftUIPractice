@@ -25,6 +25,7 @@
 		247A60052C79AE7E00906909 /* TossView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247A60042C79AE7E00906909 /* TossView.swift */; };
 		2493A4EE2C82C10A00927750 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493A4ED2C82C10A00927750 /* SearchView.swift */; };
 		2493A4F12C82C57500927750 /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493A4F02C82C57500927750 /* TransitionView.swift */; };
+		2493A4F42C82C72B00927750 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2493A4F32C82C72B00927750 /* WalletView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		247A60042C79AE7E00906909 /* TossView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossView.swift; sourceTree = "<group>"; };
 		2493A4ED2C82C10A00927750 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2493A4F02C82C57500927750 /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		2493A4F32C82C72B00927750 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				247A60022C79AE4C00906909 /* APIKey.swift */,
-				2407851E2C7F03AD00E06A5E /* Wrapper */,
-				240785192C7F027400E06A5E /* CustomModifier */,
 				247A5FF22C79ADF100906909 /* SwiftUIPracticeApp.swift */,
 				247A5FF42C79ADF100906909 /* ContentView.swift */,
-				247A60042C79AE7E00906909 /* TossView.swift */,
-				240785152C7EFF2900E06A5E /* GenreView.swift */,
-				240785172C7F022300E06A5E /* NetflixView.swift */,
+				2493A4F32C82C72B00927750 /* WalletView.swift */,
+				2407851E2C7F03AD00E06A5E /* Wrapper */,
+				240785192C7F027400E06A5E /* CustomModifier */,
+				2493A4F22C82C6A100927750 /* View */,
 				2493A4EF2C82C56C00927750 /* Transition */,
 				247A5FF62C79ADF200906909 /* Assets.xcassets */,
 				247A5FF82C79ADF200906909 /* Preview Content */,
@@ -131,6 +132,16 @@
 				2493A4F02C82C57500927750 /* TransitionView.swift */,
 			);
 			path = Transition;
+			sourceTree = "<group>";
+		};
+		2493A4F22C82C6A100927750 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				247A60042C79AE7E00906909 /* TossView.swift */,
+				240785152C7EFF2900E06A5E /* GenreView.swift */,
+				240785172C7F022300E06A5E /* NetflixView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				2407851B2C7F029700E06A5E /* ButtonWrapper.swift in Sources */,
 				240785162C7EFF2900E06A5E /* GenreView.swift in Sources */,
 				240785182C7F022300E06A5E /* NetflixView.swift in Sources */,
+				2493A4F42C82C72B00927750 /* WalletView.swift in Sources */,
 				240785262C7F10ED00E06A5E /* CornerRadiusWrapper.swift in Sources */,
 				240785242C7F08B200E06A5E /* BoldWeightWrapper.swift in Sources */,
 				2493A4F12C82C57500927750 /* TransitionView.swift in Sources */,
