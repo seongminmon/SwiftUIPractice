@@ -7,34 +7,48 @@
 
 import SwiftUI
 
-struct Money: Hashable, Identifiable {
-    enum Category: String {
-        case one
-        case two
-        case three
+struct Market: Hashable, Codable {
+    let market: String
+    let korean: String
+    let english: String
+    
+    enum CodingKeys: String, CodingKey {
+        case market
+        case korean = "korean_name"
+        case english = "english_name"
     }
+}
+
+struct UpbitAPI {
+    private init() {}
     
-    let id = UUID()
-    let price: Int = .random(in: 1000...10000)
-    let product: String
-    let category: Category
-    
-    var amountFormat: String {
-        return price.formatted()
+    static func fetchAllMarket(completion: @escaping ([Market]) -> Void) {
+        let url = URL(string: "https://api.upbit.com/v1/market/all")!
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {
+                print("데이터 응답 없음")
+                return
+            }
+            
+            do {
+                let decodedData = try JSONDecoder().decode([Market].self, from: data)
+                
+                DispatchQueue.main.async {
+                    completion(decodedData)
+                }
+            } catch {
+                print("디코딩 에러: \(error)")
+            }
+        }
+        .resume()
     }
 }
 
 struct WalletView: View {
     
-    let dummy: [Money] = [
-        Money(product: "asdf", category: .one),
-        Money(product: "zxcv", category: .two),
-        Money(product: "qwer", category: .three),
-        Money(product: "ghjk", category: .one),
-    ]
-    
-    @State private var banner = "23,456,467,700원"
-    @State private var money: [Money] = []
+    @State private var banner = "11,111,111,111원"
+    @State private var money: [Market] = []
     
     var body: some View {
         NavigationStack {
@@ -42,7 +56,7 @@ struct WalletView: View {
                 VStack {
                     ScrollView(.horizontal) {
                         LazyHStack {
-                            ForEach(1..<5) { data in
+                            ForEach(0..<5) { data in
                                 bannerView()
                                     .containerRelativeFrame(.horizontal)
                             }
@@ -52,7 +66,7 @@ struct WalletView: View {
                     .scrollTargetBehavior(.viewAligned)
                     .safeAreaPadding([.horizontal], 40)
                     LazyVStack {
-                        ForEach(money, id: \.id) { data in
+                        ForEach(money, id: \.self) { data in
                             listView(data: data)
                         }
                     }
@@ -60,11 +74,15 @@ struct WalletView: View {
             }
             .scrollIndicators(.hidden)
             .refreshable { // iOS15+
-                banner = "34,532,130원"
-                money = dummy.shuffled()
+                banner = "22,222,222,222원"
+                UpbitAPI.fetchAllMarket { market in
+                    money = market
+                }
             }
             .onAppear {
-                money = dummy.shuffled()
+                UpbitAPI.fetchAllMarket { market in
+                    money = market
+                }
             }
             .navigationTitle("My Wallet")
         }
@@ -112,14 +130,14 @@ struct WalletView: View {
         return -result
     }
     
-    func listView(data: Money) -> some View {
+    func listView(data: Market) -> some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(data.product)
-                Text(data.category.rawValue)
+                Text(data.korean)
+                Text(data.english)
             }
             Spacer()
-            Text(data.amountFormat)
+            Text(data.market)
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 8)
